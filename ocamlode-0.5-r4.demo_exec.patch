@@ -1,0 +1,11 @@
+--- demo_exec.sh.orig	2009-08-13 04:11:46.000000000 +0200
++++ demo_exec.sh	2009-08-13 04:11:57.000000000 +0200
+@@ -29,7 +29,7 @@
+ 
+ 
+ # build the libraries
+-make ode.cma
++#make ode.cma
+ make drawstuff.cma -f drawstuff.make -e GL_PATH="$GL_PATH"
+ 
+ 

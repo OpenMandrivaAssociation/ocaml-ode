@@ -1,0 +1,11 @@
+--- ode_c.c.orig	2009-08-13 04:02:43.000000000 +0200
++++ ode_c.c	2009-08-13 04:04:17.000000000 +0200
+@@ -4308,7 +4308,7 @@
+ ocamlode_dPlaneSpace (value nv)
+ {
+ #if defined(MEM_CPY) // dSINGLE
+-  CAMLparam1 (n);
++  CAMLparam1 (nv);
+   CAMLlocal1 (rv);
+   dVector3 n, p, q;
+   dVector3_val (nv, n);
