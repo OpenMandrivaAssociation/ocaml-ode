@@ -1,6 +1,6 @@
 Name:           ocaml-ode
-Version:        0.5
-Release:        %mkrel 1.r4
+Version:        0.5r4
+Release:        2
 Summary:        OCaml bindings to the Open Dynamics Engine (ODE)
 License:        LGPL with exceptions
 Group:          Development/Other
@@ -8,8 +8,8 @@ URL:            http://www.linux-nantes.org/~fmonnier/OCaml/ODE/
 Source0:        http://www.linux-nantes.org/~fmonnier/OCaml/ODE/download/ocamlode-0.5-r4.tar.gz
 Patch0:         ocamlode-0.5-r4.dPlaneSpace.patch
 Patch1:         ocamlode-0.5-r4.demo_exec.patch
-BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}
 BuildRequires:  ocaml-findlib
+BuildRequires:  ocaml
 BuildRequires:  ode-devel
 
 %description
@@ -37,16 +37,12 @@ mkdir examples
 mv drawstuff.ml drawstuff.make demo_*.ml demo_exec.sh examples/
 
 %install
-rm -rf %{buildroot}
 export DESTDIR=%{buildroot}
 export OCAMLFIND_DESTDIR=%{buildroot}/%{_libdir}/ocaml
 export DLLDIR=$OCAMLFIND_DESTDIR/stublibs
 mkdir -p $OCAMLFIND_DESTDIR/stublibs
 mkdir -p $OCAMLFIND_DESTDIR/ode
 ocamlfind install ode META ode.cmi *.{mli,cma,cmxa,cmx,a,so}
-
-%clean
-rm -rf %{buildroot}
 
 %files
 %defattr(-,root,root)
@@ -64,4 +60,12 @@ rm -rf %{buildroot}
 %{_libdir}/ocaml/ode/*.cmxa
 %{_libdir}/ocaml/ode/*.cmx
 %{_libdir}/ocaml/ode/*.mli
+
+
+
+%changelog
+* Thu Aug 13 2009 Florent Monnier <blue_prawn@mandriva.org> 0.5-1.r4mdv2010.0
++ Revision: 415930
+- import ocaml-ode
+
 
