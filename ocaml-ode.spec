@@ -1,6 +1,6 @@
 Name:           ocaml-ode
 Version:        0.5r4
-Release:        2
+Release:        3
 Summary:        OCaml bindings to the Open Dynamics Engine (ODE)
 License:        LGPL with exceptions
 Group:          Development/Other
