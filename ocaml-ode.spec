@@ -4,7 +4,7 @@ Release:        3
 Summary:        OCaml bindings to the Open Dynamics Engine (ODE)
 License:        LGPL with exceptions
 Group:          Development/Other
-URL:            http://www.linux-nantes.org/~fmonnier/OCaml/ODE/
+URL:            https://www.linux-nantes.org/~fmonnier/OCaml/ODE/
 Source0:        http://www.linux-nantes.org/~fmonnier/OCaml/ODE/download/ocamlode-0.5-r4.tar.gz
 Patch0:         ocamlode-0.5-r4.dPlaneSpace.patch
 Patch1:         ocamlode-0.5-r4.demo_exec.patch
